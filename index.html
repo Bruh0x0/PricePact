@@ -1,0 +1,61 @@
+
+<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>PricePact | Coming Soon</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:Inter,sans-serif;background:#090914;color:#fff;overflow-x:hidden}
+body:before,body:after{content:"";position:fixed;width:34rem;height:34rem;border-radius:50%;filter:blur(120px);opacity:.25;animation:f 14s ease-in-out infinite;z-index:-1}
+body:before{background:#7c3aed;left:-8rem;top:-8rem}body:after{background:#4338ca;right:-8rem;bottom:-8rem;animation-delay:5s}
+@keyframes f{50%{transform:translate(60px,-40px) scale(1.15)}}
+nav{position:sticky;top:0;padding:20px 7%;display:flex;justify-content:space-between;background:rgba(8,8,16,.55);backdrop-filter:blur(15px)}
+.logo{font-size:30px;font-weight:800}.logo span{color:#a78bfa}
+.hero{min-height:90vh;display:grid;place-items:center;text-align:center;padding:2rem}
+.badge{display:inline-block;padding:.7rem 1.2rem;border:1px solid #7c3aed;border-radius:999px;background:rgba(124,58,237,.1);color:#d8c7ff}
+h1{font-size:clamp(3rem,8vw,6rem);margin:1.5rem 0}
+.grad{background:linear-gradient(90deg,#fff,#d8b4fe,#8b5cf6);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+p{color:#c1c1cf;line-height:1.9}
+.hero p{max-width:760px;font-size:1.15rem}
+.btn{display:inline-block;margin-top:2rem;padding:1rem 2rem;border-radius:14px;text-decoration:none;color:#fff;background:linear-gradient(135deg,#8b5cf6,#6d28d9)}
+section{padding:6rem 8%}
+h2{text-align:center;font-size:2.5rem;margin-bottom:1rem}
+.center{max-width:900px;margin:auto;text-align:center}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;margin-top:3rem}
+.card{background:rgba(255,255,255,.05);backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.08);padding:2rem;border-radius:20px;opacity:0;transform:translateY(30px);transition:.8s}
+.card.show{opacity:1;transform:none}
+.road{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:2rem}
+.chip{padding:.8rem 1rem;border-radius:999px;background:#161626;border:1px solid rgba(255,255,255,.08)}
+.active{background:#6d28d9}
+footer{text-align:center;padding:4rem;border-top:1px solid rgba(255,255,255,.08)}
+.social a{margin:0 1rem;color:#ddd;text-decoration:none}
+@media(max-width:700px){nav{padding:18px}section{padding:4rem 1.2rem}}
+</style></head><body>
+<nav><div class='logo'>Price<span>Pact</span></div><div>Coming Soon</div></nav>
+<div class='hero'><div><div class='badge'>BUILDING THE FUTURE OF SMART SHOPPING</div><h1>Compare prices.<br><span class='grad'>Buy smarter.</span></h1><p>PricePact helps you compare prices from trusted retailers so you can quickly find the best deal without opening dozens of tabs.</p><a class='btn' href='#mission'>Our Vision</a></div></div>
+
+<section id='mission'><div class='center'><h2>Our Mission</h2><p>Shopping online shouldn't feel like a chore. We created PricePact because finding the best price often means visiting multiple stores, comparing shipping costs and wondering if a better offer exists elsewhere. Our goal is simple: bring trusted retailers together in one place, make prices transparent and help everyone shop with confidence. We don't sell products ourselves—we help you discover the right retailer at the right price.</p></div></section>
+
+<section><div class='center'><h2>Starting Local. Thinking Global.</h2><p>Every successful platform starts somewhere. PricePact will launch first in <strong>the Netherlands</strong>, allowing us to perfect the experience, build relationships with trusted retailers and ensure our comparison engine delivers reliable results. Once we've built a solid foundation, we'll gradually expand into new markets across Europe before exploring opportunities worldwide.</p>
+<div class='road'>
+<div class='chip active'>🇳🇱 Netherlands • Launch</div>
+<div class='chip'>🇧🇪 Belgium</div>
+<div class='chip'>🇩🇪 Germany</div>
+<div class='chip'>🇫🇷 France</div>
+<div class='chip'>🇮🇹 Italy</div>
+<div class='chip'>🌍 More Countries</div>
+</div></div></section>
+
+<section><h2>How PricePact Works</h2><div class='grid'>
+<div class='card'><h3>1. Search</h3><p>Search for the product you're looking for.</p></div>
+<div class='card'><h3>2. Compare</h3><p>Compare prices from trusted retailers in your country.</p></div>
+<div class='card'><h3>3. Purchase</h3><p>Complete your purchase directly on the retailer's official website.</p></div>
+</div></section>
+
+<section><div class='center'><h2>Transparent by Design</h2><p>PricePact never acts as the seller. We connect shoppers with trusted retailers and redirect you to their official websites to complete your purchase securely. In some cases, we may earn a small affiliate commission from participating retailers. This never changes the price you pay and never influences which retailer offers the best deal.</p></div></section>
+
+<footer><h2>Follow Our Journey</h2><p>We're actively building PricePact. Follow our progress as we prepare for launch.</p><div class='social'><a href='https://x.com/PricePactCo'>X (Twitter)</a><a href='https://www.instagram.com/pricepactco/'>Instagram</a></div><p style='margin-top:2rem;color:#777'>© 2026 PricePact</p></footer>
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.2});
+document.querySelectorAll('.card').forEach(c=>io.observe(c));
+</script>
+</body></html>
